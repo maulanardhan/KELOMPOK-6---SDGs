@@ -5,7 +5,8 @@ SHOW TABLES;
 DESCRIBE MENU;
 
 -- 2. Membuat Tabel Kategori
-ALTER TABLE menu ADD COLUMN detail_menu JSON;
+ALTER TABLE menu 
+  ADD COLUMN detail_menu JSON;
 
 -- 3. Membuat Tabel Produk
 CREATE TABLE menu (
