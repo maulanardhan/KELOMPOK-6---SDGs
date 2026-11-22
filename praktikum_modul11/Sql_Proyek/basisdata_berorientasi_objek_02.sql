@@ -22,11 +22,11 @@
 
 --- penerapan JSON pada sistem SIGAP-MBG
 {
-   "nama_menu" : "Nasi Ayam Sayur"
+   "nama_menu" : "Nasi Ayam Sayur",
    "jenis" : "Makanan Utama"
    "tersedia" : true
    "kandungan_gizi" : {
-      "kalori" ; 450,
+      "kalori" : 450,
       "protein" : 30,
       "karbohidrat" : 60
     },
