@@ -27,17 +27,14 @@ SELECT
     "jenis":"Makanan Utama",
     "protein": 30,
     "kalori": 450
-  }')AS json_valid,
+  }') AS json_valid,
 
-JSON_EXTRACT(
-  '{
-    "nama_menu":"Nasi Ayam Sayur"
+  JSON_EXTRACT('{
+    "nama_menu":"Nasi Ayam Sayur",
     "jenis":"Makanan Utama",
     "protein": 30,
     "kalori": 450
-  }',
-    '$.nama_menu'
-  ) AS nama_menu;
+  }', '$.nama_menu') AS nama_menu;
 
   
   
