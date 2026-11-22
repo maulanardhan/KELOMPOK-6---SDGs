@@ -1,7 +1,8 @@
 --- Representasi objek menu pada SIGAP-MBG
 </> JSON
+{
 "id_menu": "Nasi Ayam Sayur",
-"nama-menu": {
+"nama_menu": {
     "jenis" : "Makanan Utama",
     "kandungan_gizi" : {
       "kalori" : 450,
