@@ -8,7 +8,7 @@ SELECT VERSION();
 SELECT @@version_comment;
 
 --- melihat storage engine
-SHOW ENGINE;
+SHOW ENGINES;
 
 --- Melihat karakteristik Server
 SHOW VARIABLES LIKE 'character_set_server';
