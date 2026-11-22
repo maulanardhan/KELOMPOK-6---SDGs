@@ -1,7 +1,8 @@
 --- 1. Database transport_db
 ------------------------------------------
 -- A. Query 1 – JOIN tabel TRIPS dan ROUTES
--- 1. SELECT
+-- Rencana 1 (Join / Full Scan Dahulu)
+-- 1. SELECT (Query Utama:sql)
 SELECT
     t.trip_id,
     t.route_id,
@@ -14,7 +15,7 @@ JOIN ROUTES r
 WHERE t.route_id = 12
     AND t.started_at >= '2026-11-01';
 
--- 2. EXPLAIN
+-- 2. EXPLAIN (Memeriksa Execution Plan)
 EXPLAIN
 SELECT
     t.trip_id,
@@ -28,7 +29,7 @@ JOIN ROUTES r
 WHERE t.route_id = 12
     AND t.started_at >= '2026-11-01';
 
--- 3. EXPLAIN ANALYZE
+-- 3. EXPLAIN ANALYZE (Memeriksa Execution Plan Analyze)
 EXPLAIN ANALYZE
 SELECT
     t.trip_id,
@@ -43,7 +44,8 @@ WHERE t.route_id = 12
     AND t.started_at >= '2026-11-01';
 
 -- B. Query 2 – JOIN dengan Subquery
--- 1. SELECT
+-- Rencana 2 (Seleksi / Filter Dahulu)
+-- 1. SELECT (Query Utama:sql)
 SELECT
     t.trip_id,
     t.route_id,
@@ -59,7 +61,7 @@ FROM (
 JOIN ROUTES r
     ON t.route_id = r.route_id;
 
--- 2. EXPLAIN
+-- 2. EXPLAIN (Memeriksa Execution Plan)
 EXPLAIN
 SELECT
     t.trip_id,
@@ -76,7 +78,7 @@ FROM (
 JOIN ROUTES r
     ON t.route_id = r.route_id;
 
--- 3. EXPLAIN ANALYZE
+-- 3. EXPLAIN ANALYZE (Memeriksa Execution Plan Analyze)
 EXPLAIN ANALYZE
 SELECT
     t.trip_id,
